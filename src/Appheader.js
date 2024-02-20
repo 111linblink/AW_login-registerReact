@@ -14,7 +14,7 @@ const Appheader = () => {
             setDisplayUsername(username);
             setShowMenu(true);
         }
-    }, []); // Eliminar GetUserAccess del array de dependencias
+    }, [usenavigate]); // Eliminar GetUserAccess del array de dependencias
 
     const handleLogout = () => {
         sessionStorage.clear();

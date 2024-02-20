@@ -58,6 +58,16 @@ const Register = () => {
                                     {!id.trim() && <p className="errmsg">El nombre de usuario es obligatorio.</p>}
                                 </div>
                                 <div className="form-group">
+                                    <label htmlFor="name" className="text-secondary text-black">Nombre Completo</label>
+                                    <input
+                                        id="name"
+                                        className="form-control"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                    />
+                                    {!name.trim() && <p className="errmsg">El nombre completo es obligatorio.</p>}
+                                </div>
+                                <div className="form-group">
                                     <label htmlFor="password" className="text-secondary text-black">Contraseña</label>
                                     <div className="input-group">
                                         <input
@@ -95,16 +105,6 @@ const Register = () => {
                                         </button>
                                     </div>
                                     {password !== confirmPassword && <p className="errmsg">Las contraseñas no coinciden.</p>}
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="name" className="text-secondary text-black">Nombre Completo</label>
-                                    <input
-                                        id="name"
-                                        className="form-control"
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                    />
-                                    {!name.trim() && <p className="errmsg">El nombre completo es obligatorio.</p>}
                                 </div>
                                 <div className="text-center">
                                     <button type="submit" className="btn btn-primary">Registrarse</button>
